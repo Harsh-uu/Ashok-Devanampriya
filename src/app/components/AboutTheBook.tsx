@@ -3,7 +3,7 @@
 
 import { Check, ChevronDown, ChevronUp } from "lucide-react";
 import Image from "next/image";
-import React, { useState } from "react";
+import React, { useState, useEffect } from "react";
 
 // --- Data Structure for Lost Secret Book ---
 const bookData = {
@@ -26,17 +26,59 @@ const bookData = {
     publicationDate: "October 2025",
     publisher: "Nu Voice Press"
   },
-  buyLinks: [
-    { name: "Amazon", url: "https://www.amazon.in/dp/819887268X?ref=cm_sw_r_ffobk_cp_ud_dp_YFN3753GXXMSF69HSPSV&ref_=cm_sw_r_ffobk_cp_ud_dp_YFN3753GXXMSF69HSPSV&social_share=cm_sw_r_ffobk_cp_ud_dp_YFN3753GXXMSF69HSPSV&bestFormat=true", id: 0, image: "/amazon.png" },
-    { name: "Kindle", url: "https://www.amazon.in/dp/B0FY65VSDP?ref=cm_sw_r_ffobk_cp_ud_dp_QMS1F5GBS3AQF19QWFKX&ref_=cm_sw_r_ffobk_cp_ud_dp_QMS1F5GBS3AQF19QWFKX&social_share=cm_sw_r_ffobk_cp_ud_dp_QMS1F5GBS3AQF19QWFKX&bestFormat=true", id: 1, image: "/kindle.png" },
-    { name: "Audible", url: "https://www.audible.in/pd/B0G2586LKR?qid=1763107253&sr=1-1&ref_pageloadid=not_applicable&pf_rd_p=2d02bc98-4366-4f94-99d9-5e898cda0766&pf_rd_r=Y74NV78NC0H7816885T2&plink=JUGaWumPEuLuz13L&pageLoadId=V1uEtCACJOEgw2VS&creativeId=b2592cc9-1111-40d9-9474-98f67c8075cc&ref=a_search_c3_lProduct_1_1", id: 2, image: "/audible.png" },
-  ],
+  buyLinks: {
+    IN: [
+      { name: "Amazon", url: "https://www.amazon.in/dp/819887268X?ref=cm_sw_r_ffobk_cp_ud_dp_YFN3753GXXMSF69HSPSV&ref_=cm_sw_r_ffobk_cp_ud_dp_YFN3753GXXMSF69HSPSV&social_share=cm_sw_r_ffobk_cp_ud_dp_YFN3753GXXMSF69HSPSV&bestFormat=true", id: 0, image: "/amazon.png" },
+      { name: "Kindle", url: "https://www.amazon.in/dp/B0FY65VSDP?ref=cm_sw_r_ffobk_cp_ud_dp_QMS1F5GBS3AQF19QWFKX&ref_=cm_sw_r_ffobk_cp_ud_dp_QMS1F5GBS3AQF19QWFKX&social_share=cm_sw_r_ffobk_cp_ud_dp_QMS1F5GBS3AQF19QWFKX&bestFormat=true", id: 1, image: "/kindle.png" },
+      { name: "Audible", url: "https://www.audible.in/pd/B0G2586LKR?qid=1763107253&sr=1-1&ref_pageloadid=not_applicable&pf_rd_p=2d02bc98-4366-4f94-99d9-5e898cda0766&pf_rd_r=Y74NV78NC0H7816885T2&plink=JUGaWumPEuLuz13L&pageLoadId=V1uEtCACJOEgw2VS&creativeId=b2592cc9-1111-40d9-9474-98f67c8075cc&ref=a_search_c3_lProduct_1_1", id: 2, image: "/audible.png" },
+    ],
+    US: [
+      { name: "Amazon", url: "https://www.amazon.com/dp/819887268X", id: 0, image: "/amazon.png" },
+      { name: "Kindle", url: "https://www.amazon.com/Lost-Secret-Hidden-Truth-Nalanda-ebook/dp/B0FY65VSDP/ref=tmm_kin_swatch_0", id: 1, image: "/kindle.png" },
+      { name: "Audible", url: "https://www.amazon.com/Lost-Secret-Hidden-Truth-Nalanda/dp/B0G25HVFDT/ref=tmm_aud_swatch_0", id: 2, image: "/audible.png" },
+    ],
+  },
+  regionNames: {
+    IN: "India",
+    US: "United States"
+  }
 };
 
 // --- Main Component ---
 export const AboutTheBook = () => {
   const [keyFeaturesOpen, setKeyFeaturesOpen] = useState(false);
   const [bookDetailsOpen, setBookDetailsOpen] = useState(false);
+  const [selectedRegion, setSelectedRegion] = useState<'IN' | 'US'>('IN');
+  const [isLoadingRegion, setIsLoadingRegion] = useState(true);
+
+  // Auto-detect user region using ipapi
+  useEffect(() => {
+    const detectUserRegion = async () => {
+      try {
+        const response = await fetch('http://ip-api.com/json/');
+        const data = await response.json();
+        
+        if (data.status === 'success') {
+          const countryCode = data.countryCode;
+          
+          // Map country codes to our regions
+          if (countryCode === 'IN') {
+            setSelectedRegion('IN');
+          } else {
+            // Default to US for all other countries
+            setSelectedRegion('US');
+          }
+        }
+      } catch (error) {
+        console.log('Could not detect region, using default');
+        // Keep default region (IN)
+      } finally {
+        setIsLoadingRegion(false);
+      }
+    };
+
+    detectUserRegion();
+  }, []);
 
   return (
     <section id="about-the-book" className="py-16 text-gray-900">
@@ -161,28 +203,45 @@ export const AboutTheBook = () => {
 
             {/* Buy Links */}
             <div>
-              <h4 className="text-2xl text-center font-semibold text-gray-800 mb-4 ">
+              <h4 className="text-2xl text-center font-semibold text-gray-800 mb-4">
                 Get Your Copy
               </h4>
+              
               <div className="flex lg:flex-wrap justify-center items-center">
-                {bookData.buyLinks.map((link) => (
-                  <a
-                    key={link.id}
-                    href={link.url}
-                    target="_blank"
-                    rel="noopener noreferrer"
-                    className="w-32 h-20 flex items-center justify-center transition-colors hover:opacity-80"
-                  >
-                    <Image
-                      src={link.image}
-                      alt={link.name}
-                      width={link.name === "Kindle" ? 200 : 70}
-                      height={link.name === "Kindle" ? 200 : 70}
-                      className={`object-cover ${link.name === "Audible" ? "-mt-2" : ""}`}
-                    />
-                  </a>
-                ))}
+                {isLoadingRegion ? (
+                  // Placeholder during loading to prevent layout shift
+                  <>
+                    {[1, 2, 3].map((i) => (
+                      <div
+                        key={i}
+                        className="w-32 h-20 flex items-center justify-center"
+                      >
+                        <div className="w-20 h-10 bg-gray-200 animate-pulse rounded"></div>
+                      </div>
+                    ))}
+                  </>
+                ) : (
+                  // Actual buy links
+                  bookData.buyLinks[selectedRegion].map((link) => (
+                    <a
+                      key={link.id}
+                      href={link.url}
+                      target="_blank"
+                      rel="noopener noreferrer"
+                      className="w-32 h-20 flex items-center justify-center transition-colors hover:opacity-80"
+                    >
+                      <Image
+                        src={link.image}
+                        alt={link.name}
+                        width={link.name === "Kindle" ? 200 : 70}
+                        height={link.name === "Kindle" ? 200 : 70}
+                        className={`object-cover ${link.name === "Audible" ? "-mt-2" : ""}`}
+                      />
+                    </a>
+                  ))
+                )}
               </div>
+              
               <p className="text-center text-gray-700 mt-4">or your nearest bookstore</p>
             </div>
           </div>
