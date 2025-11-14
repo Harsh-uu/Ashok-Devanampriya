@@ -1,7 +1,7 @@
 // src/components/Footer.tsx
 "use client";
 
-import { Facebook, Instagram, Twitter, Linkedin, Mail } from "lucide-react";
+import { Facebook, Instagram, Twitter, Linkedin, Mail, Youtube } from "lucide-react";
 
 export const Footer = () => {
   return (
@@ -25,15 +25,7 @@ export const Footer = () => {
           <div>
             <div className="flex justify-center mt-12 space-x-4">
               <a 
-                href="https://twitter.com/akashpasricha" 
-                target="_blank" 
-                rel="noopener noreferrer"
-                className=" text-white p-3 rounded-full hover:bg-red-700 bg-[#e9343b] transition-colors"
-              >
-                <Twitter className="w-4 h-4" />
-              </a>
-              <a 
-                href="https://instagram.com/akashpasricha" 
+                href="https://instagram.com/akash.inked" 
                 target="_blank" 
                 rel="noopener noreferrer"
                 className=" text-white p-3 rounded-full hover:bg-red-700 bg-[#e9343b] transition-colors"
@@ -41,15 +33,15 @@ export const Footer = () => {
                 <Instagram className="w-4 h-4" />
               </a>
               <a 
-                href="https://linkedin.com/in/akashpasricha" 
-                target="_blank" 
+                href="#" 
+                // target="_blank" 
                 rel="noopener noreferrer"
                 className=" text-white p-3 rounded-full hover:bg-red-700 bg-[#e9343b] transition-colors"
               >
-                <Linkedin className="w-4 h-4" />
+                <Youtube className="w-4 h-4" />
               </a>
               <a 
-                href="mailto:contact@akashpasricha.com" 
+                href="mailto:akash.pasricha@gmail.com" 
                 className=" text-white p-3 rounded-full hover:bg-red-700 bg-[#e9343b] transition-colors"
               >
                 <Mail className="w-4 h-4" />

@@ -22,13 +22,14 @@ const bookData = {
     releaseType: "English",
     isbn: "978-81-988726-8-5",
     binding: "Royal Format- Paperback",
-    price: "Coming Soon",
     hsnCode: "49011010",
     publicationDate: "October 2025",
     publisher: "Nu Voice Press"
   },
   buyLinks: [
-    { name: "Amazon", url: "#", id: 0, image: "/amazon.png" },
+    { name: "Amazon", url: "https://www.amazon.in/dp/819887268X?ref=cm_sw_r_ffobk_cp_ud_dp_YFN3753GXXMSF69HSPSV&ref_=cm_sw_r_ffobk_cp_ud_dp_YFN3753GXXMSF69HSPSV&social_share=cm_sw_r_ffobk_cp_ud_dp_YFN3753GXXMSF69HSPSV&bestFormat=true", id: 0, image: "/amazon.png" },
+    { name: "Kindle", url: "https://www.amazon.in/dp/B0FY65VSDP?ref=cm_sw_r_ffobk_cp_ud_dp_QMS1F5GBS3AQF19QWFKX&ref_=cm_sw_r_ffobk_cp_ud_dp_QMS1F5GBS3AQF19QWFKX&social_share=cm_sw_r_ffobk_cp_ud_dp_QMS1F5GBS3AQF19QWFKX&bestFormat=true", id: 1, image: "/kindle.png" },
+    { name: "Audible", url: "https://www.audible.in/pd/B0G2586LKR?qid=1763107253&sr=1-1&ref_pageloadid=not_applicable&pf_rd_p=2d02bc98-4366-4f94-99d9-5e898cda0766&pf_rd_r=Y74NV78NC0H7816885T2&plink=JUGaWumPEuLuz13L&pageLoadId=V1uEtCACJOEgw2VS&creativeId=b2592cc9-1111-40d9-9474-98f67c8075cc&ref=a_search_c3_lProduct_1_1", id: 2, image: "/audible.png" },
   ],
 };
 
@@ -142,10 +143,6 @@ export const AboutTheBook = () => {
                       <span className="text-gray-800">{bookData.details.binding}</span>
                     </div>
                     <div className="flex justify-between">
-                      <span className="font-medium text-gray-600">Price:</span>
-                      <span className="text-gray-800">{bookData.details.price}</span>
-                    </div>
-                    <div className="flex justify-between">
                       <span className="font-medium text-gray-600">HSN Code:</span>
                       <span className="text-gray-800">{bookData.details.hsnCode}</span>
                     </div>
@@ -167,23 +164,26 @@ export const AboutTheBook = () => {
               <h4 className="text-2xl text-center font-semibold text-gray-800 mb-4 ">
                 Get Your Copy
               </h4>
-              <div className="flex flex-wrap justify-center items-center">
-                <a
-                  href={bookData.buyLinks[0].url}
-                  target="_blank"
-                  rel="noopener noreferrer"
-                  className="w-28 h-16 overflow-hidden px-4 flex items-center justify-center transition-colors"
-                >
-                  <Image
-                    src="/amazon.png"
-                    alt="Amazon"
-                    width={100}
-                    height={100}
-                    className="object-cover object-center"
-                  />
-                </a>
-                <span className="text-lg text-gray-700 -mt-2.5 -ml-2.5">or your nearest bookstore</span>
+              <div className="flex lg:flex-wrap justify-center items-center">
+                {bookData.buyLinks.map((link) => (
+                  <a
+                    key={link.id}
+                    href={link.url}
+                    target="_blank"
+                    rel="noopener noreferrer"
+                    className="w-32 h-20 flex items-center justify-center transition-colors hover:opacity-80"
+                  >
+                    <Image
+                      src={link.image}
+                      alt={link.name}
+                      width={link.name === "Kindle" ? 200 : 70}
+                      height={link.name === "Kindle" ? 200 : 70}
+                      className={`object-cover ${link.name === "Audible" ? "-mt-2" : ""}`}
+                    />
+                  </a>
+                ))}
               </div>
+              <p className="text-center text-gray-700 mt-4">or your nearest bookstore</p>
             </div>
           </div>
         </div>
