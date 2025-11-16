@@ -32,17 +32,19 @@ export const BookTrailer = () => {
         playerRef.current = new window.YT.Player(containerRef.current, {
           height: '100%',
           width: '100%',
-          videoId: 'ekVUUKsWZig',
+          videoId: 'ML5fSpzs7Y8',
           playerVars: {
             autoplay: 0,
             mute: 1,
             loop: 1,
-            playlist: 'ekVUUKsWZig',
+            playlist: 'ML5fSpzs7Y8',
             controls: 1,
             showinfo: 0,
             rel: 0,
             modestbranding: 1,
             iv_load_policy: 3,
+            hd: 1,
+            vq: 'hd1080',
           },
           events: {
             onReady: () => {
