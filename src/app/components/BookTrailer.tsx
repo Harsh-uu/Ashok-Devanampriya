@@ -32,12 +32,12 @@ export const BookTrailer = () => {
         playerRef.current = new window.YT.Player(containerRef.current, {
           height: '100%',
           width: '100%',
-          videoId: 'ML5fSpzs7Y8',
+          videoId: 'Y5TLTnr0FuM',
           playerVars: {
             autoplay: 0,
             mute: 1,
             loop: 1,
-            playlist: 'ML5fSpzs7Y8',
+            playlist: 'Y5TLTnr0FuM',
             controls: 1,
             showinfo: 0,
             rel: 0,
@@ -45,10 +45,29 @@ export const BookTrailer = () => {
             iv_load_policy: 3,
             hd: 1,
             vq: 'hd1080',
+            origin: typeof window !== 'undefined' ? window.location.origin : undefined,
           },
           events: {
             onReady: () => {
               setPlayerReady(true);
+            },
+            onError: (event: any) => {
+              console.error('YouTube Player Error:', event.data);
+              // If there's an error, try fallback iframe
+              setPlayerReady(false);
+              if (containerRef.current) {
+                containerRef.current.innerHTML = `
+                  <iframe 
+                    width="100%" 
+                    height="100%" 
+                    src="https://www.youtube.com/embed/Y5TLTnr0FuM?autoplay=0&mute=1&loop=1&playlist=Y5TLTnr0FuM&controls=1&rel=0&modestbranding=1" 
+                    title="Book Trailer" 
+                    frameborder="0" 
+                    allow="accelerometer; autoplay; clipboard-write; encrypted-media; gyroscope; picture-in-picture; web-share" 
+                    allowfullscreen>
+                  </iframe>
+                `;
+              }
             },
           },
         });
