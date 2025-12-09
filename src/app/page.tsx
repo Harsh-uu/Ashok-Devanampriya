@@ -55,7 +55,7 @@ export default function Home() {
           <PRArticles />
         </div>
 
-        <div className="px-4 bg-gray-50">
+        <div className=" bg-gray-50">
           {/* Interactive Quiz Section */}
           <BookQuiz />
         </div>

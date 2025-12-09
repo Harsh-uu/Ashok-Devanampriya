@@ -439,7 +439,7 @@ export const BookQuiz = () => {
             <button
               onClick={handleNextQuestion}
               disabled={selectedAnswer === null || showResult}
-              className={`px-8 py-3 font-semibold shadow-lg transition-all flex items-center gap-2 border ${
+              className={`md:px-8 px-4 md:py-3 py-2 font-semibold shadow-lg transition-all flex items-center gap-2 border ${
                 selectedAnswer === null || showResult
                   ? "bg-gray-300 text-gray-500 cursor-not-allowed"
                   : "bg-[#e9343b] hover:bg-red-700 text-white"
