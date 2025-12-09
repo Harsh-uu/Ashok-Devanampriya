@@ -25,16 +25,6 @@ export const MediaInquiries = () => {
 
           {/* Contact Information */}
           <div className="space-y-6">
-            {/* Email */}
-            <div className="flex items-center justify-center gap-3 text-gray-800">
-              <Mail className="w-6 h-6 text-gray-800" />
-              <a 
-                href="mailto:info@nuvoicepress.com" 
-                className="text-lg font-medium hover:text-[#e9343b] transition-colors"
-              >
-                info@nuvoicepress.com
-              </a>
-            </div>
 
             {/* Publisher Button */}
             <div className="mt-8">
@@ -51,7 +41,7 @@ export const MediaInquiries = () => {
           </div>
 
           {/* Additional Info */}
-          <div className="mt-12 p-6 bg-white shadow-sm border">
+          <div className="mt-12 p-6 bg-gray-50 shadow-sm border">
             <h3 className="text-xl font-semibold text-gray-800 mb-3">
               Media Kit Available
             </h3>

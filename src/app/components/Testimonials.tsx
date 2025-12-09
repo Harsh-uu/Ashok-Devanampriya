@@ -86,13 +86,14 @@ export const Testimonials = () => {
 
   return (
     <section id="testimonials" className="py-16 overflow-hidden">
-      <div className="max-w-7xl mx-auto px-4 md:px-6">
+      <div className="max-w-7xl mx-auto px-4">
         <div className="text-center mb-16">
           <h2 className="text-4xl md:text-5xl font-poppins font-semibold text-gray-900 mb-4">
             Reader <span className="text-[#e9343b]">Reviews</span>
           </h2>
         </div>
 
+                <div className="mt-16 max-w-6xl mx-auto">
         <Carousel
           setApi={setApi}
           opts={{
@@ -153,24 +154,27 @@ export const Testimonials = () => {
           </CarouselContent>
 
           {/* Navigation Buttons */}
-          <CarouselPrevious className="absolute -left-2 top-1/2 -translate-y-1/2 bg-white shadow-lg border-2 border-gray-200 hover:border-gray-200 hover:bg-gray-200 transition-all duration-300 z-20" />
-          <CarouselNext className="absolute -right-2 top-1/2 -translate-y-1/2 bg-white shadow-lg border-2 border-gray-200 hover:border-gray-200 hover:bg-gray-200 transition-all duration-300 z-20" />
+          <CarouselPrevious className="hidden lg:flex absolute -left-16 top-1/2 -translate-y-1/2 w-10 h-10 rounded-full border-0 bg-white/80 backdrop-blur-sm hover:bg-white shadow-lg hover:shadow-xl transition-all duration-300" />
+          <CarouselNext className="hidden lg:flex absolute -right-16 top-1/2 -translate-y-1/2 w-10 h-10 rounded-full border-0 bg-white/80 backdrop-blur-sm hover:bg-white shadow-lg hover:shadow-xl transition-all duration-300" />
         </Carousel>
 
         {/* Carousel Indicators */}
-        <div className="flex justify-center mt-4 md:mt-12 gap-3">
+        <div className="flex justify-center mt-8 gap-2">
           {testimonialsData.map((_, index) => (
             <button
               key={index}
               onClick={() => api?.scrollTo(index)}
-              className={`w-3 h-3 rounded-full transition-all duration-300 ${
-                index === current 
-                  ? "bg-gray-500 scale-125" 
-                  : "bg-gray-300 hover:bg-gray-400"
+              className={`transition-all duration-300 rounded-full ${
+                index === current
+                  ? "w-6 h-2 bg-[#e9343b]"
+                  : "w-2 h-2 bg-gray-300 hover:bg-gray-400"
               }`}
+              aria-label={`Go to testimonial ${index + 1}`}
             />
           ))}
         </div>
+        </div>
+
       </div>
     </section>
   );

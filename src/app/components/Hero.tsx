@@ -54,7 +54,7 @@ export const Hero = () => {
           
           <div className="relative z-10">
             <Image
-              src="/book1.png"
+              src="/hero_book.png"
               alt="Lost Secret Book"
               width={600}
               height={800}

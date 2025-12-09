@@ -10,18 +10,19 @@ import { BookTrailer } from "./components/BookTrailer";
 import { Testimonials } from "./components/Testimonials";
 import { BookQuiz } from "./components/BookQuiz";
 import { MediaInquiries } from "./components/MediaInquiries";
+import { PRArticles } from "./components/PRArticles";
 
 export default function Home() {
   return (
     <div className="relative text-gray-800 font-sans">
       {/* Background container with herobg.jpg */}
-      <div 
+      <div
         className="relative bg-cover bg-center bg-no-repeat"
         style={{ backgroundImage: "url('/herobg.jpg')" }}
       >
         {/* Background overlay for better content readability */}
         <div className="absolute inset-0 bg-black/50" />
-        
+
         {/* Header and Hero content positioned above background */}
         <div className="relative z-10 h-full flex flex-col overflow-hidden">
           <Header />
@@ -30,31 +31,37 @@ export default function Home() {
           </div>
         </div>
       </div>
-      
+
       <main className="mx-auto">
         <div className="relative isolate overflow-hidden">
           {/* Additional content can go here */}
         </div>
-         <div className="px-4 relative overflow-hidden">
-          <AboutTheBook/>
+        <div className="px-4 relative overflow-hidden">
+          <AboutTheBook />
         </div>
-        
+
         {/* Book Trailer Section */}
         <BookTrailer />
-        
+
         <div className="px-4 relative isolate overflow-hidden ">
           <Founder />
         </div>
-        
+
         <div className="px-4 relative overflow-hidden bg-gray-50">
-          <Testimonials/>
+          <Testimonials />
         </div>
-        
-        {/* Interactive Quiz Section */}
-        <BookQuiz />
-        
+
+        <div className="px-4">
+          <PRArticles />
+        </div>
+
         <div className="px-4 bg-gray-50">
-          <MediaInquiries/>
+          {/* Interactive Quiz Section */}
+          <BookQuiz />
+        </div>
+
+        <div className="px-4">
+          <MediaInquiries />
         </div>
       </main>
       <Footer />
