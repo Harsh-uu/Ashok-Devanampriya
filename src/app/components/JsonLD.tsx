@@ -12,14 +12,14 @@ export default function JsonLD() {
       name: "HubHawks",
       logo: {
         "@type": "ImageObject",
-        url: "https://akashpasricha.com/logo.png",
+        url: "https://lostsecret.org/logo.png",
       },
     },
     description: "A razor-sharp thriller that fuses ancient history with high-stakes espionage. Lost Secret weaves the mysteries of Nalanda with modern-day intrigue.",
-    image: "https://akashpasricha.com/hero.png",
+    image: "https://lostsecret.org/hero.png",
     genre: "Thriller",
     inLanguage: "en",
-    url: "https://akashpasricha.com",
+    url: "https://lostsecret.org",
     aggregateRating: {
       "@type": "AggregateRating",
       ratingValue: "4.8",

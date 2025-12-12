@@ -34,13 +34,13 @@ export const metadata: Metadata = {
   openGraph: {
     type: "website",
     locale: "en_US",
-    url: "https://akashpasricha.com",
+    url: "https://lostsecret.org",
     siteName: "Lost Secret - The Hidden Truth of Nalanda",
     title: "Lost Secret: The Hidden Truth of Nalanda",
     description: "A razor-sharp thriller that fuses ancient history with high-stakes espionage",
     images: [
       {
-        url: "/hero.png",
+        url: "https://lostsecret.org/hero.png",
         width: 1200,
         height: 630,
         alt: "Lost Secret Book Cover",
@@ -52,7 +52,7 @@ export const metadata: Metadata = {
     card: "summary_large_image",
     title: "Lost Secret: The Hidden Truth of Nalanda",
     description: "A razor-sharp thriller that fuses ancient history with high-stakes espionage",
-    images: ["/hero.png"],
+    images: ["https://lostsecret.org/hero.png"],
   },
   robots: {
     index: true,
@@ -69,7 +69,7 @@ export const metadata: Metadata = {
     google: "Pc8kPG0p5Bcs0uBNdg71q7Mtvl05XF7nUfyKj05zaAc",
   },
   alternates: {
-    canonical: "https://akashpasricha.com",
+    canonical: "https://lostsecret.org",
   },
 };
 
