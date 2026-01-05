@@ -33,10 +33,10 @@ export const Founder = () => {
 
           {/* --- Text Content Column (Second) --- */}
           <div className="lg:w-1/2 md:w-[60%] w-full flex flex-col justify-center p-8 md:p-12 lg:p-16 text-center lg:text-left">
-            <h1 className="text-3xl font-semibold">Akash Pasricha</h1>
+            <h1 className="text-3xl font-semibold">Ashok Devanampriya</h1>
            
             <p className="text-gray-600 lg:text-lg leading-relaxed mt-4">
-              Akash Pasricha is a curious traveller with a passion for immersing himself in local cultures—learning their languages, customs, and stories. His interests range from skiing and hiking to drumming and cooking (though not usually all at once). This debut book is a tribute to Indian history, written to uncover forgotten narratives and spark fresh inspiration. He splits his time between New Delhi and California, juggling family life and historical rabbit holes—with varying degrees of success.
+              Ashok is a fintech entrepreneur helping Indian HNIs and global NRIs invest responsibly through AI-driven research and risk-adjusted strategies. He is the founder and CEO of Cautilya Capital, a Bengaluru-based quant wealth management firm. With over a decade of market experience, he combines quantitative models, investing psychology, and risk management to guide long-term wealth creation. A mechanical engineer, MBA, and IIM Bangalore alumnus, Ashok is also a TEDx speaker, mentor, and visiting professor at leading business schools across India.
             </p>
           </div>
         </div>

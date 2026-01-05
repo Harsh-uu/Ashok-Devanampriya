@@ -29,7 +29,7 @@ export const MediaInquiries = () => {
             {/* Publisher Button */}
             <div className="mt-8">
               <a
-                href="https://nuvoice-revamp.vercel.app/"
+                href="https://nuvoicepress.com"
                 target="_blank"
                 rel="noopener noreferrer"
                 className="inline-flex items-center gap-3 bg-[#e9343b] text-white font-semibold py-4 px-8 hover:bg-red-700 transition-colors"

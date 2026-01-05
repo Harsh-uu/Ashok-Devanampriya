@@ -8,9 +8,7 @@ import { Hero } from "./components/Hero";
 import { AboutTheBook } from "./components/AboutTheBook";
 import { BookTrailer } from "./components/BookTrailer";
 import { Testimonials } from "./components/Testimonials";
-import { BookQuiz } from "./components/BookQuiz";
 import { MediaInquiries } from "./components/MediaInquiries";
-import { PRArticles } from "./components/PRArticles";
 
 export default function Home() {
   return (
@@ -49,15 +47,6 @@ export default function Home() {
 
         <div className="px-4 relative overflow-hidden bg-gray-50">
           <Testimonials />
-        </div>
-
-        <div className="px-4">
-          <PRArticles />
-        </div>
-
-        <div className=" bg-gray-50">
-          {/* Interactive Quiz Section */}
-          <BookQuiz />
         </div>
 
         <div className="px-4">

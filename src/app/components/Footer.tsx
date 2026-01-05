@@ -14,10 +14,10 @@ export const Footer = () => {
               href="/" 
               className="text-2xl md:text-3xl font-poppins font-semibold hover:text-[#e9343b] transition-colors"
             >
-              Akash Pasricha
+              Ashok Devanampriya
             </a>
-            <p className="text-gray-400 mt-2 text-sm">
-              Author of Lost Secret: The Hidden Truth of Nalanda
+            <p className="text-gray-600 mt-2 text-sm">
+              Author of Middle Class Millionaire
             </p>
           </div>
 
@@ -52,7 +52,7 @@ export const Footer = () => {
         {/* Bottom Bar */}
         <div className="border-t mt-8 pt-8 text-center">
             <p className="text-gray-400 text-sm">
-              &copy; {new Date().getFullYear()} Akash Pasricha. All rights reserved.
+              &copy; {new Date().getFullYear()} Ashok Devanampriya. All rights reserved.
             </p>
         </div>
       </div>
