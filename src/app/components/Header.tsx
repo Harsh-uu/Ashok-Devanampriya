@@ -3,7 +3,7 @@
 const navLinks = [
   { href: "#about-the-book", label: "About" },
   { href: "#founder", label: "Author" },
-  { href: "#testimonials", label: "Reviews" },
+  { href: "#testimonials", label: "Ecosystem" },
   { href: "#media-inquiries", label: "Media Inquiry" },
 ];
 
