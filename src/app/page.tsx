@@ -9,6 +9,7 @@ import { AboutTheBook } from "./components/AboutTheBook";
 import { BookTrailer } from "./components/BookTrailer";
 import { Testimonials } from "./components/Testimonials";
 import { MediaInquiries } from "./components/MediaInquiries";
+import { Company } from "./components/Company";
 
 export default function Home() {
   return (
@@ -16,10 +17,10 @@ export default function Home() {
       {/* Background container with herobg.jpg */}
       <div
         className="relative bg-cover bg-center bg-no-repeat"
-        style={{ backgroundImage: "url('/herobg.jpg')" }}
+        style={{ backgroundImage: "url('/image.png')" }}
       >
         {/* Background overlay for better content readability */}
-        <div className="absolute inset-0 bg-black/50" />
+        <div className="absolute inset-0 bg-black/40" />
 
         {/* Header and Hero content positioned above background */}
         <div className="relative z-10 h-full flex flex-col overflow-hidden">
@@ -38,13 +39,15 @@ export default function Home() {
           <AboutTheBook />
         </div>
 
-        {/* Book Trailer Section */}
-        <BookTrailer />
+        {/* <BookTrailer /> */}
 
-        <div className="px-4 relative isolate overflow-hidden ">
+        <div className="px-4 relative isolate overflow-hidden bg-gray-50">
           <Founder />
         </div>
 
+        <div className="px-4 relative overflow-hidden ">
+          <Company />
+        </div>
         <div className="px-4 relative overflow-hidden bg-gray-50">
           <Testimonials />
         </div>

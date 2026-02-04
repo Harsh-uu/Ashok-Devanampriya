@@ -21,8 +21,8 @@ export const Founder = () => {
           <div className="md:w-1/2 w-full">
             <div className="relative w-full h-72 md:h-full lg:h-full">
               <Image
-                src="/Akash.png"
-                alt="Akash Pasricha"
+                src="/ashok.avif"
+                alt="Ashok Devanampriya"
                 fill
                 className="object-cover object-center"
                 sizes="(max-width: 1023px) 100vw, 50vw"

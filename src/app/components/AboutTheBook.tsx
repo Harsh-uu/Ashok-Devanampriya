@@ -7,7 +7,7 @@ import React, { useState } from "react";
 
 // --- Data Structure for Lost Secret Book ---
 const bookData = {
-  title: "Lost Secret: The Hidden Truth of Nalanda",
+  title: "The Middle Class Millionaire",
   highlights: [
     "The simplest and safest way to build long-term wealth",
     "Learn how to choose funds and create your own SIP strategy",
@@ -27,7 +27,7 @@ const bookData = {
     publicationDate: "",
     publisher: "NuVoice Press",
   },
-  buyLinks: [{ name: "Amazon", url: "https://amzn.in/d/6qQ2QU7", id: 0 }],
+  buyLinks: [{ name: "Amazon", url: "", id: 0 }],
 };
 
 // --- Main Component ---
@@ -49,12 +49,12 @@ export const AboutTheBook = () => {
         <div className="grid grid-cols-1 lg:grid-cols-2 gap-6 lg:gap-16 items-start">
           {/* Left Column - Book Cover */}
           <div className="order-1 lg:order-1">
-            <div className="relative aspect-[5/6] max-w-md mx-auto lg:max-w-full">
+            <div className="relative aspect-[3/4] max-w-md mx-auto lg:max-w-full">
               <Image
-                src="/book2.png"
+                src="/book-mcm.png"
                 alt={bookData.title}
                 fill
-                className="object-cover"
+                className="object-contain"
                 priority
               />
             </div>

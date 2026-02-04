@@ -2,7 +2,7 @@
 "use client";
 
 import React, { useState, useEffect } from "react";
-import { Star, Quote } from "lucide-react";
+import { Book, Smartphone, Play, Zap, Users, Share2 } from "lucide-react";
 import { type CarouselApi } from "@/components/ui/carousel"; // Import the API type
 import {
   Carousel,
@@ -15,39 +15,39 @@ import {
 const testimonialsData = [
   {
     id: 1,
-    quote: "Lost Secret is an absolute masterpiece! The way it weaves ancient history with modern espionage is brilliant. Kabir and Reeya's chase across India had me on the edge of my seat. Couldn't put it down!",
-    authorName: "Priya Sharma",
-    rating: 5,
+    title: "MCM Book",
+    icon: Book,
+    description: "The Middle-Class Millionaire is a foundational guide helping readers understand and achieve financial independence. It covers essential investment principles and practical financial planning techniques tailored for middle-class wealth builders.",
   },
   {
     id: 2,
-    quote: "What a thrilling ride! The connection between wootz steel and thorium energy was fascinating. The author's research is impeccable, and the storytelling is gripping. Best thriller I've read this year!",
-    authorName: "Rajesh Kumar",
-    rating: 5,
+    title: "MCM App",
+    icon: Smartphone,
+    description: "A streamlined digital platform for modern investment and portfolio management with real-time market data. Manage your investments efficiently on the go with an intuitive interface and personalized recommendations.",
   },
   {
     id: 3,
-    quote: "Incredible blend of history and science fiction. The archaeological sites of India come alive in this story. The conspiracy theory feels so plausible it's scary. Highly recommended!",
-    authorName: "Anjali Mehta",
-    rating: 4,
+    title: "MCM Web Series",
+    icon: Play,
+    description: "An engaging animated series featuring character-driven stories that simplify complex financial concepts. Making financial education entertaining and accessible to viewers of all knowledge levels.",
   },
   {
     id: 4,
-    quote: "From Nalanda to modern espionage - this book has everything! The character development is excellent, and the pace never slows down. A must-read for thriller lovers.",
-    authorName: "Vikram Patel",
-    rating: 5,
+    title: "MCM Bootcamp",
+    icon: Zap,
+    description: "An intensive 7-day immersive program exploring diverse wealth-building products and strategies with expert guidance. Participants gain practical knowledge on investment options, asset allocation, and long-term wealth management.",
   },
   {
     id: 5,
-    quote: "Lost Secret kept me awake all night! The way ancient secrets connect to modern technology is genius. Reeya Ghosh is my new favorite fictional historian. Brilliant work!",
-    authorName: "Meera Reddy",
-    rating: 5,
+    title: "MCM Conclave",
+    icon: Users,
+    description: "A premier wealth management summit hosted across six major cities bringing together financial experts and entrepreneurs. Discuss market trends, investment opportunities, and cutting-edge wealth-building strategies in an interactive environment.",
   },
   {
     id: 6,
-    quote: "Absolutely loved this book! The tension builds perfectly throughout, and the climax is explosive. The author's knowledge of Indian history and archaeology is impressive. Five stars!",
-    authorName: "Arjun Singh",
-    rating: 5,
+    title: "MCM Social Media Channel",
+    icon: Share2,
+    description: "A dedicated video hub offering regular updates, tutorials, and valuable financial education content. Stay informed about wealth management and financial growth opportunities through bite-sized learning modules and market analysis.",
   },
 ];
 
@@ -70,26 +70,14 @@ export const Testimonials = () => {
     };
   }, [api]);
 
-  // Function to render stars
-  const renderStars = (rating: number) => {
-    return Array.from({ length: 5 }, (_, index) => (
-      <Star
-        key={index}
-        className={`w-4 h-4 ${
-          index < rating 
-            ? "fill-[#FFCF30] text-[#FFCF30]" 
-            : "fill-gray-200 text-gray-200"
-        }`}
-      />
-    ));
-  };
+
 
   return (
     <section id="testimonials" className="py-16 overflow-hidden">
       <div className="max-w-7xl mx-auto px-4">
         <div className="text-center mb-16">
           <h2 className="text-4xl md:text-5xl font-poppins font-semibold text-gray-900 mb-4">
-            Reader <span className="text-[#e9343b]">Reviews</span>
+            MCM <span className="text-[#e9343b]">Ecosystem</span>
           </h2>
         </div>
 
@@ -114,37 +102,29 @@ export const Testimonials = () => {
                       index === current ? "scale-100 opacity-100" : "scale-95 opacity-70"
                     }`}
                   >
-                    <div className="relative bg-white shadow-xl transition-all duration-300 border border-gray-200 min-h-[320px] flex flex-col">
-                      {/* Quote Icon - Fixed positioning */}
+                    <div className="relative bg-white shadow-xl transition-all duration-300 border border-gray-200 min-h-[300px] flex flex-col">
+                      {/* Icon - Fixed positioning */}
                       <div className="absolute -top-6 left-8 z-10">
-                        <div className="bg-gray-800 p-4 shadow-lg">
-                          <Quote className="w-6 h-6 text-white" />
+                        <div className="bg-[#e9343b] p-4 shadow-lg">
+                          {React.createElement(testimonial.icon, {
+                            className: "w-6 h-6 text-white",
+                          })}
                         </div>
                       </div>
-                      
+
                       {/* Content Container with proper padding */}
                       <div className="flex-1 flex flex-col p-8 pt-12">
-                        {/* Rating Stars */}
-                        <div className="flex justify-center mb-6">
-                          <div className="flex gap-1">
-                            {renderStars(testimonial.rating)}
-                          </div>
+                        {/* Title */}
+                        <div className="text-center mb-6 pb-6 border-b-2 border-gray-200">
+                          <h3 className="text-2xl font-semibold text-gray-900">
+                            {testimonial.title}
+                          </h3>
                         </div>
 
-                        {/* Testimonial Quote */}
-                        <blockquote className="text-gray-700 text-lg leading-relaxed text-center mb-8 font-medium italic flex-1 flex items-center">
-                          <span>"{testimonial.quote}"</span>
-                        </blockquote>
-
-                        {/* Author Information */}
-                        <div className="text-center border-t border-gray-200 pt-6 mt-auto">
-                          <h4 className="font-semibold text-gray-900 text-lg mb-1">
-                            {testimonial.authorName}
-                          </h4>
-                          <p className="text-gray-400 font-semibold text-sm uppercase tracking-wide">
-                            Verified Reader
-                          </p>
-                        </div>
+                        {/* Description */}
+                        <p className="text-gray-700 text-base leading-relaxed flex-1 flex text-center">
+                          {testimonial.description}
+                        </p>
                       </div>
                     </div>
                   </div>
