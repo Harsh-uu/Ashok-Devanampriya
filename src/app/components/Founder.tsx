@@ -19,12 +19,12 @@ export const Founder = () => {
         <div className="bg-[white/90] shadow-xl overflow-hidden flex flex-col md:flex-row max-w-6xl mx-auto">
           {/* --- Image Column (First) --- */}
           <div className="md:w-1/2 w-full">
-            <div className="relative w-full h-72 md:h-full lg:h-full">
+            <div className="relative w-full h-72 md:h-full lg:h-full overflow-clip">
               <Image
-                src="/ashok.avif"
+                src="/Ashok.jpeg"
                 alt="Ashok Devanampriya"
                 fill
-                className="object-cover object-center"
+                className="object-cover object-center scale-125"
                 sizes="(max-width: 1023px) 100vw, 50vw"
                 priority
               />

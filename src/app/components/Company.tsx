@@ -4,70 +4,27 @@
 import Image from "next/image";
 import { useState, useEffect } from "react";
 
-// The array of images to cycle through
-const carouselImages = [
-  "https://res.cloudinary.com/dev6vbqlb/image/upload/f_auto,q_auto,w_auto/v1767881792/k1_c4aije_fugbfl.jpg",
-  "https://res.cloudinary.com/dev6vbqlb/image/upload/f_auto,q_auto,w_auto/v1767881792/k2_ozkugr_qrzvcu.jpg",
-  "https://res.cloudinary.com/dev6vbqlb/image/upload/f_auto,q_auto,w_auto/v1767881792/k3_yczboa_ctkskw.jpg",
-  "https://res.cloudinary.com/dev6vbqlb/image/upload/f_auto,q_auto,w_auto/v1767881792/k4_ztjlom_sm0juh.jpg",
-  "https://res.cloudinary.com/dev6vbqlb/image/upload/f_auto,q_auto,w_auto/v1767881792/k5_e2dspg_wfg7fe.jpg",
-];
 
 // --- Internal Carousel Component ---
 const ImageCarousel = () => {
   const [currentIndex, setCurrentIndex] = useState(0);
 
-  // Auto-switch timer
-  useEffect(() => {
-    const timer = setInterval(() => {
-      setCurrentIndex((prevIndex) => (prevIndex + 1) % carouselImages.length);
-    }, 5000); // 5 seconds
-
-    return () => clearInterval(timer);
-  }, []);
-
   return (
     <div className="relative w-full h-full">
       {/* Images with Fade Transition */}
-      {carouselImages.map((src, index) => (
         <div
-          key={src}
-          className={`absolute inset-0 transition-opacity duration-1000 ease-in-out ${
-            index === currentIndex ? "opacity-100 z-10" : "opacity-0 z-0"
-          }`}
+          className={`absolute bg-white inset-0 transition-opacity duration-1000 ease-in-out`}
         >
           <Image
-            src="/cclogo.jpg"
+            src="/logo.png"
             alt="Cautilya Capital"
             fill
-            className={`object-cover ${
-              src === "https://res.cloudinary.com/dev6vbqlb/image/upload/f_auto,q_auto,w_auto/v1767881792/k2_ozkugr_qrzvcu.jpg" || src === "https://res.cloudinary.com/dev6vbqlb/image/upload/f_auto,q_auto,w_auto/v1767881792/k5_e2dspg_wfg7fe.jpg" 
-                ? "object-center" 
-                : "object-center"
-            }`}
+            className="object-contain w-10 h-10 object-center"
             sizes="(max-width: 640px) 160px,
        (max-width: 768px) 220px,
        300px"
-            priority={index === 0} // Priority load only the first image
           />
         </div>
-      ))}
-
-      {/* Indicators (Dots) */}
-      <div className="absolute bottom-4 left-1/2 transform -translate-x-1/2 z-20 flex space-x-2">
-        {carouselImages.map((_, index) => (
-          <button
-            key={index}
-            onClick={() => setCurrentIndex(index)}
-            className={`w-2.5 h-2.5 rounded-full transition-all duration-300 shadow-sm ${
-              index === currentIndex
-                ? "bg-rose-600 scale-125"
-                : "bg-gray-300 hover:bg-gray-400"
-            }`}
-            aria-label={`Go to slide ${index + 1}`}
-          />
-        ))}
-      </div>
     </div>
   );
 };
@@ -78,7 +35,7 @@ export const Company = () => {
       <div className="max-w-7xl mx-auto px-4">
         {/* --- Heading --- */}
         <h2 className="text-4xl md:text-5xl mb-12 md:mb-16 text-center font-poppins font-semibold text-gray-900">
-          Cautilya <span className="text-[#e9343b]">Capital</span>
+          Company <span className="text-[#e9343b]">Bio</span>
         </h2>
 
         {/* --- Main Content Container --- */}
@@ -100,7 +57,7 @@ export const Company = () => {
           {/* Desktop Layout - Side by Side */}
           <div className="hidden md:flex bg-white/90 shadow-xl border overflow-hidden min-h-[500px]">
             {/* --- Carousel Column (First) --- */}
-            <div className="w-full lg:w-1/2 relative bg-gray-100">
+            <div className="w-full lg:w-1/2 relative p-4">
                {/* The Carousel Component fills this container */}
                <ImageCarousel />
             </div>
