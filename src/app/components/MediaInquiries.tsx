@@ -41,7 +41,7 @@ export const MediaInquiries = () => {
           </div>
 
           {/* Additional Info */}
-          <div className="mt-12 p-6 bg-gray-50 shadow-sm border">
+          <div className="mt-12 p-6 bg-white shadow-sm border">
             <h3 className="text-xl font-semibold text-gray-800 mb-3">
               Media Kit Available
             </h3>

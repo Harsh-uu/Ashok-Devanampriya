@@ -39,8 +39,6 @@ export default function Home() {
           <AboutTheBook />
         </div>
 
-        {/* <BookTrailer /> */}
-
         <div className="px-4 relative isolate overflow-hidden bg-gray-50">
           <Founder />
         </div>
@@ -48,11 +46,13 @@ export default function Home() {
         <div className="px-4 relative overflow-hidden ">
           <Company />
         </div>
-        <div className="px-4 relative overflow-hidden bg-gray-50">
+                <BookTrailer />
+
+        <div className="px-4 relative overflow-hidden">
           <Testimonials />
         </div>
 
-        <div className="px-4">
+        <div className="px-4 relative isolate overflow-hidden bg-gray-50">
           <MediaInquiries />
         </div>
       </main>

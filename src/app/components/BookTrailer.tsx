@@ -32,13 +32,13 @@ export const BookTrailer = () => {
         playerRef.current = new window.YT.Player(containerRef.current, {
           height: '100%',
           width: '100%',
-          videoId: 'Y5TLTnr0FuM',
+          videoId: 'PySMqA1H8Xc',
           playerVars: {
             autoplay: 0,
             mute: 1,
             loop: 1,
-            playlist: 'Y5TLTnr0FuM',
-            controls: 1,
+            playlist: 'PySMqA1H8Xc',
+            controls: 0,
             showinfo: 0,
             rel: 0,
             modestbranding: 1,
@@ -60,7 +60,7 @@ export const BookTrailer = () => {
                   <iframe 
                     width="100%" 
                     height="100%" 
-                    src="https://www.youtube.com/embed/Y5TLTnr0FuM?autoplay=0&mute=1&loop=1&playlist=Y5TLTnr0FuM&controls=1&rel=0&modestbranding=1" 
+                    src="https://www.youtube.com/embed/PySMqA1H8Xc?si=kNkK0gQ6PyVIT8Mm&amp;controls=0" 
                     title="Book Trailer" 
                     frameborder="0" 
                     allow="accelerometer; autoplay; clipboard-write; encrypted-media; gyroscope; picture-in-picture; web-share" 
@@ -128,10 +128,10 @@ export const BookTrailer = () => {
       <div className="max-w-4xl mx-auto px-6">
         <div className="text-center mb-12">
           <h2 className="text-4xl md:text-5xl font-poppins font-semibold text-gray-900 mb-4">
-            Book <span className="text-[#e9343b]">Trailer</span>
+            Wealth Expo <span className="text-[#e9343b]">2025</span>
           </h2>
           <p className="text-lg text-gray-600">
-            Get a glimpse into the thrilling world of Lost Secret
+            India's Largest Offline Summit & Expo 2025
           </p>
         </div>
 
