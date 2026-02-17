@@ -19,8 +19,7 @@ export const MediaInquiries = () => {
         <div className="space-y-8">
           {/* Description Text */}
           <p className="text-lg md:text-xl text-gray-700 leading-relaxed max-w-3xl mx-auto">
-            For media inquiries, rights, or event requests, please contact NuvoicePress, 
-            an imprint of Penguin Random House India.
+            For media inquiries, rights, or event requests, please contact Nu VoicePress, a publishing division of Hubhawks India.
           </p>
 
           {/* Contact Information */}

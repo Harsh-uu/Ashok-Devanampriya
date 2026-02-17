@@ -17,7 +17,7 @@ const testimonialsData = [
     id: 1,
     title: "MCM Book",
     icon: Book,
-    description: "The Middle-Class Millionaire is a foundational guide helping readers understand and achieve financial independence. It covers essential investment principles and practical financial planning techniques tailored for middle-class wealth builders.",
+    description: "The Middle Class Millionaire is a foundational guide helping readers understand and achieve financial independence. It covers essential investment principles and practical financial planning techniques tailored for middle class wealth builders.",
   },
   {
     id: 2,

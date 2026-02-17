@@ -24,7 +24,7 @@ export const Hero = () => {
           Ashok Devanampriya
           </h1>
           <p className="mt-4 sm:mt-6 text-base sm:text-lg max-w-2xl mx-auto">
-            A story-driven guide that helps India’s middle-class break free from financial fear, shift from survival to strategy, and build wealth through disciplined habits and smart investing.
+            A story-driven guide that helps India’s middle class break free from financial fear, shift from survival to strategy, and build wealth through disciplined habits and smart investing.
           </p>
           <div className="mt-6 sm:mt-8 xl:mt-10 flex flex-col sm:flex-row gap-4 justify-center">
             <button 
@@ -51,7 +51,7 @@ export const Hero = () => {
           
           <div className="relative z-10 p-3">
             <Image
-              src="/mcm.jpeg"
+              src="/mcm_cover.jpg"
               alt="Middle Class Millionaire Book"
               width={350}
               height={350}

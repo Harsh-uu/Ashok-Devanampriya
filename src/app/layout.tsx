@@ -14,7 +14,7 @@ const geistMono = Geist_Mono({
 
 export const metadata: Metadata = {
   title: "Middle Class Millionaire - by Ashok Devanampriya",
-  description: "A story-driven guide that helps India’s middle-class break free from financial fear, shift from survival to strategy, and build wealth through disciplined habits and smart investing.",
+  description: "A story-driven guide that helps India’s middle class break free from financial fear, shift from survival to strategy, and build wealth through disciplined habits and smart investing.",
   authors: [{ name: "Ashok Devanampriya" }],
   creator: "Ashok Devanampriya",
   publisher: "NuVoice Press",

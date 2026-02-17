@@ -9,23 +9,22 @@ import React, { useState } from "react";
 const bookData = {
   title: "The Middle Class Millionaire",
   highlights: [
-    "The simplest and safest way to build long-term wealth",
-    "Learn how to choose funds and create your own SIP strategy",
-    "Why discipline and consistency beat market timing",
-    "Real stories of big wins—and costly early exits",
+    "Why SIP is the simplest, safest path to wealth",
+    "How to pick funds and build a personalised SIP strategy",
+    "How habits, consistency, and behaviour matter more than market timing",
+    "Real stories of people who won big (and those who lost by quitting early)",
   ],
   details: {
-    genre: "Financial",
+    genre: "",
     category: "Non-fiction",
     pageExtent: "",
     releaseType: "English",
-    isbn10: "014347619X",
-    isbn13: "978-0143476191",
-    binding: "Hardcover",
+    isbn13: "978-81-996715-3-9",
+    binding: "Paperback",
     price: "",
-    hsnCode: "49011010",
     publicationDate: "",
-    publisher: "NuVoice Press",
+    publisher: "Nu VoicePress",
+    distributer: "Penguin Random House India",
   },
   buyLinks: [{ name: "Amazon", url: "", id: 0 }],
 };
@@ -51,7 +50,7 @@ export const AboutTheBook = () => {
           <div className="order-1 lg:order-1">
             <div className="relative aspect-[3/4] max-w-md mx-auto lg:max-w-full">
               <Image
-                src="/book-mcm.png"
+                src="/mcmbook.jpg"
                 alt={bookData.title}
                 fill
                 className="object-contain"
@@ -66,7 +65,7 @@ export const AboutTheBook = () => {
             <div>
               <div className="space-y-4 text-base lg:text-lg text-justify leading-relaxed">
                 <p className="text-gray-700">
-                  <span className="font-bold">The Middle-Class Millionaire</span> is a practical, emotional, and transformational money guide for India’s middle class that explains why millions of hardworking Indians earn well yet remain trapped in EMIs, fear, and financial confusion. Told through relatable, story-driven chapters following Arjun, his family, and everyday Indians, the book takes readers from financial stress to clarity and control by exposing behavioural traps, money myths, and hidden leaks that silently drain wealth. Before diving into investments, it lays down the non-negotiable foundations—emergency funds, term and health insurance, and clear thinking around gold and fixed deposits—helping readers build a strong financial safety engine and make small, powerful shifts toward long-term wealth and independence.
+                  <span className="font-bold">The Middle Class Millionaire</span> is a practical, emotional, and transformational money guide for India’s middle class that explains why millions of hardworking Indians earn well yet remain trapped in EMIs, fear, and financial confusion. Told through relatable, story-driven chapters following Arjun, his family, and everyday Indians, the book takes readers from financial stress to clarity and control by exposing behavioural traps, money myths, and hidden leaks that silently drain wealth. Before diving into investments, it lays down the non-negotiable foundations—emergency funds, term and health insurance, and clear thinking around gold and fixed deposits—helping readers build a strong financial safety engine and make small, powerful shifts toward long-term wealth and independence.
 
                 </p>
               </div>
@@ -79,7 +78,7 @@ export const AboutTheBook = () => {
                 className="w-full px-6 py-4 bg-gray-100 hover:bg-gray-200 transition-colors flex items-center justify-between text-left"
               >
                 <h4 className="text-xl font-semibold text-black">
-                  Key Features
+                  Readers Learn:
                 </h4>
                 {keyFeaturesOpen ? (
                   <ChevronUp className="w-5 h-5 text-gray-600" />
@@ -150,14 +149,6 @@ export const AboutTheBook = () => {
                     </div>
                     <div className="flex justify-between">
                       <span className="font-medium text-gray-600">
-                        ISBN-10:
-                      </span>
-                      <span className="text-gray-800">
-                        {bookData.details.isbn10}
-                      </span>
-                    </div>
-                    <div className="flex justify-between">
-                      <span className="font-medium text-gray-600">
                         ISBN-13:
                       </span>
                       <span className="text-gray-800">
@@ -180,14 +171,6 @@ export const AboutTheBook = () => {
                     </div>
                     <div className="flex justify-between">
                       <span className="font-medium text-gray-600">
-                        HSN Code:
-                      </span>
-                      <span className="text-gray-800">
-                        {bookData.details.hsnCode}
-                      </span>
-                    </div>
-                    <div className="flex justify-between">
-                      <span className="font-medium text-gray-600">
                         Publication Date:
                       </span>
                       <span className="text-gray-800">
@@ -200,6 +183,14 @@ export const AboutTheBook = () => {
                       </span>
                       <span className="text-gray-800">
                         {bookData.details.publisher}
+                      </span>
+                    </div>
+                    <div className="flex justify-between">
+                      <span className="font-medium text-gray-600">
+                        Distributer:
+                      </span>
+                      <span className="text-gray-800">
+                        {bookData.details.distributer}
                       </span>
                     </div>
                     <div></div>
