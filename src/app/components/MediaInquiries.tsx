@@ -31,10 +31,10 @@ export const MediaInquiries = () => {
                 href="https://nuvoicepress.com"
                 target="_blank"
                 rel="noopener noreferrer"
-                className="inline-flex items-center gap-3 bg-[#e9343b] text-white font-semibold py-4 px-8 hover:bg-red-700 transition-colors"
+                className="inline-flex items-center gap-3 bg-[#e9343b] text-white font-semibold py-3 px-6 hover:bg-red-700 transition-colors"
               >
-                <span>Visit Publisher</span>
-                <ExternalLink className="w-5 h-5" />
+                <span className="text-lg">Visit Publisher</span>
+                <ExternalLink className="w-4 h-4" />
               </a>
             </div>
           </div>

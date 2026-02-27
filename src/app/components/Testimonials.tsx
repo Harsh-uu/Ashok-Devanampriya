@@ -1,16 +1,8 @@
 // src/components/Testimonials.tsx
 "use client";
 
-import React, { useState, useEffect } from "react";
+import React from "react";
 import { Book, Smartphone, Play, Zap, Users, Share2 } from "lucide-react";
-import { type CarouselApi } from "@/components/ui/carousel"; // Import the API type
-import {
-  Carousel,
-  CarouselContent,
-  CarouselItem,
-  CarouselNext,
-  CarouselPrevious,
-} from "@/components/ui/carousel";
 
 const testimonialsData = [
   {
@@ -52,26 +44,6 @@ const testimonialsData = [
 ];
 
 export const Testimonials = () => {
-  const [api, setApi] = useState<CarouselApi>();
-  const [current, setCurrent] = useState(0);
-
-  useEffect(() => {
-    if (!api) {
-      return;
-    }
-
-    setCurrent(api.selectedScrollSnap());
-    api.on("select", () => {
-      setCurrent(api.selectedScrollSnap());
-    });
-
-    return () => {
-      api.off("select", () => {});
-    };
-  }, [api]);
-
-
-
   return (
     <section id="testimonials" className="py-16 overflow-hidden">
       <div className="max-w-7xl mx-auto px-4">
@@ -81,80 +53,33 @@ export const Testimonials = () => {
           </h2>
         </div>
 
-                <div className="mt-16 max-w-6xl mx-auto">
-        <Carousel
-          setApi={setApi}
-          opts={{
-            align: "center",
-            loop: true,
-          }}
-          className="relative w-full px-2 md:px-4"
-        >
-          <CarouselContent className="-ml-4 md:-ml-8">
-            {testimonialsData.map((testimonial, index) => (
-              <CarouselItem
-                key={testimonial.id}
-                className="basis-full sm:basis-4/5 lg:basis-3/5 xl:basis-1/2 pl-4 md:pl-8"
-              >
-                <div className="px-1 py-8 md:px-2">
-                  <div
-                    className={`transition-all duration-700 ease-in-out ${
-                      index === current ? "scale-100 opacity-100" : "scale-95 opacity-70"
-                    }`}
-                  >
-                    <div className="relative bg-white shadow-xl transition-all duration-300 border border-gray-200 min-h-[300px] flex flex-col">
-                      {/* Icon - Fixed positioning */}
-                      <div className="absolute -top-6 left-8 z-10">
-                        <div className="bg-[#e9343b] p-4 shadow-lg">
-                          {React.createElement(testimonial.icon, {
-                            className: "w-6 h-6 text-white",
-                          })}
-                        </div>
-                      </div>
-
-                      {/* Content Container with proper padding */}
-                      <div className="flex-1 flex flex-col p-8 pt-12">
-                        {/* Title */}
-                        <div className="text-center mb-6 pb-6 border-b-2 border-gray-200">
-                          <h3 className="text-2xl font-semibold text-gray-900">
-                            {testimonial.title}
-                          </h3>
-                        </div>
-
-                        {/* Description */}
-                        <p className="text-gray-700 text-base leading-relaxed flex-1 flex text-center">
-                          {testimonial.description}
-                        </p>
-                      </div>
-                    </div>
+        {/* Grid Layout */}
+        <div className="grid grid-cols-1 md:grid-cols-2 lg:grid-cols-3 gap-8 max-w-6xl mx-auto">
+          {testimonialsData.map((testimonial) => (
+            <div key={testimonial.id} className="h-[280px]">
+              <div className="bg-white shadow-lg transition-all duration-300 hover:shadow-xl border border-gray-200 h-full flex flex-col">
+                {/* Header with Icon and Title */}
+                <div className="text-center pb-6 border-b-2 border-gray-200 flex items-center justify-center gap-4 px-6 pt-6">
+                  <div className="rounded-full border-rose-500 bg-rose-100 border p-2 flex-shrink-0">
+                    {React.createElement(testimonial.icon, {
+                      className: "w-5 h-5 text-red-500",
+                    })}
                   </div>
+                  <h3 className="text-lg font-semibold text-gray-900">
+                    {testimonial.title}
+                  </h3>
                 </div>
-              </CarouselItem>
-            ))}
-          </CarouselContent>
 
-          {/* Navigation Buttons */}
-          <CarouselPrevious className="hidden lg:flex absolute -left-16 top-1/2 -translate-y-1/2 w-10 h-10 rounded-full border-0 bg-white/80 backdrop-blur-sm hover:bg-white shadow-lg hover:shadow-xl transition-all duration-300" />
-          <CarouselNext className="hidden lg:flex absolute -right-16 top-1/2 -translate-y-1/2 w-10 h-10 rounded-full border-0 bg-white/80 backdrop-blur-sm hover:bg-white shadow-lg hover:shadow-xl transition-all duration-300" />
-        </Carousel>
-
-        {/* Carousel Indicators */}
-        <div className="flex justify-center mt-8 gap-2">
-          {testimonialsData.map((_, index) => (
-            <button
-              key={index}
-              onClick={() => api?.scrollTo(index)}
-              className={`transition-all duration-300 rounded-full ${
-                index === current
-                  ? "w-6 h-2 bg-[#e9343b]"
-                  : "w-2 h-2 bg-gray-300 hover:bg-gray-400"
-              }`}
-              aria-label={`Go to testimonial ${index + 1}`}
-            />
+                {/* Description */}
+                <div className="flex-1 flex items-center justify-center px-6">
+                  <p className="text-gray-700 text-sm leading-relaxed text-center">
+                    {testimonial.description}
+                  </p>
+                </div>
+              </div>
+            </div>
           ))}
         </div>
-        </div>
-
       </div>
     </section>
   );
