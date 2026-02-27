@@ -18,8 +18,9 @@ export const Hero = () => {
       <div className="relative z-10 max-w-7xl text-white flex flex-col xl:flex-row md:gap-8 items-center xl:items-start">
         <div className="w-fit z-20 text-center xl:text-center my-auto max-w-2xl">
           <h1 className="text-3xl uppercase md:text-6xl xl:text-7xl font-semibold leading-tight font-poppins">
-            The Middle Class <span className="text-5xl uppercase md:text-7xl xl:text-8xl font-semibold leading-tight font-poppins">Millionaire</span>
+            The Middle Class <span className="text-5xl relative uppercase md:text-7xl xl:text-8xl font-semibold leading-tight font-poppins">Millionaire <span className="text-5xl absolute bottom-0 left-0.5 md:bottom-4 -z-10 md:left-1 text-black uppercase md:text-7xl xl:text-8xl font-semibold leading-tight font-poppins">Millionaire</span></span>
           </h1>
+            
           <h1 className="text-2xl mt-6 sm:mt-8 xl:mt-10 sm:text-3xl md:text-4xl xl:text-5xl leading-tight font-poppins font-semibold tracking-wide uppercase">
           Ashok Devanampriya
           </h1>
@@ -55,7 +56,7 @@ export const Hero = () => {
               alt="Middle Class Millionaire Book"
               width={350}
               height={350}
-              className="w-full h-full object-cover drop-shadow-2xl"
+              className=" w-[80%] mx-auto md:w-full h-full object-cover drop-shadow-2xl"
               priority
             />
           </div>

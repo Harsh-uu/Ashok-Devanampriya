@@ -32,7 +32,7 @@ export const Founder = () => {
           </div>
 
           {/* --- Text Content Column (Second) --- */}
-          <div className="lg:w-1/2 md:w-[60%] w-full flex flex-col justify-center p-8 md:p-12 lg:p-16 text-center lg:text-left">
+          <div className="lg:w-1/2 md:w-[60%] w-full flex flex-col justify-center p-4 md:p-12 lg:p-16 text-center lg:text-left">
             <h1 className="text-3xl font-semibold">Ashok Devanampriya</h1>
            
             <p className="text-gray-600 lg:text-lg leading-relaxed mt-4">

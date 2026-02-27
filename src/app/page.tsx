@@ -10,6 +10,7 @@ import { BookTrailer } from "./components/BookTrailer";
 import { Testimonials } from "./components/Testimonials";
 import { MediaInquiries } from "./components/MediaInquiries";
 import { Company } from "./components/Company";
+import { ReadMore } from "./components/ReadMore";
 
 export default function Home() {
   return (
@@ -39,6 +40,16 @@ export default function Home() {
           <AboutTheBook />
         </div>
 
+        <div className="bg-gradient-to-r from-[#831a16] to-[#d22826] py-8 md:py-20 flex items-center justify-center h-fit">
+          <p className="text-white text-lg md:text-3xl text-center max-w-3xl px-6 leading-relaxed">
+            "If you don't find a way to make money while you sleep, you will work until you die." <span className="block mt-4 text-sm md:text-xl">-Warren Buffett</span>
+          </p>
+        </div>
+
+        <div className="px-4 relative overflow-hidden">
+          <ReadMore />
+        </div>
+
         <div className="px-4 relative isolate overflow-hidden bg-gray-50">
           <Founder />
         </div>
@@ -46,7 +57,7 @@ export default function Home() {
         <div className="px-4 relative overflow-hidden ">
           <Company />
         </div>
-                <BookTrailer />
+        <BookTrailer />
 
         <div className="px-4 relative overflow-hidden">
           <Testimonials />

@@ -31,7 +31,6 @@ const bookData = {
 
 // --- Main Component ---
 export const AboutTheBook = () => {
-  const [keyFeaturesOpen, setKeyFeaturesOpen] = useState(false);
   const [bookDetailsOpen, setBookDetailsOpen] = useState(false);
 
   return (
@@ -69,36 +68,6 @@ export const AboutTheBook = () => {
 
                 </p>
               </div>
-            </div>
-
-            {/* Key Features Dropdown */}
-            <div className="border border-gray-100 overflow-hidden">
-              <button
-                onClick={() => setKeyFeaturesOpen(!keyFeaturesOpen)}
-                className="w-full px-6 py-4 bg-gray-100 hover:bg-gray-200 transition-colors flex items-center justify-between text-left"
-              >
-                <h4 className="text-xl font-semibold text-black">
-                  Readers Learn:
-                </h4>
-                {keyFeaturesOpen ? (
-                  <ChevronUp className="w-5 h-5 text-gray-600" />
-                ) : (
-                  <ChevronDown className="w-5 h-5 text-gray-600" />
-                )}
-              </button>
-              {keyFeaturesOpen && (
-                <div className="px-6 py-4 space-y-3 bg-white">
-                  {bookData.highlights.map((highlight, index) => (
-                    <div
-                      key={index}
-                      className="flex items-start gap-3 text-left"
-                    >
-                      <Check className="w-5 h-5 text-[#df5128] mt-1 flex-shrink-0" />
-                      <span className="text-gray-700">{highlight}</span>
-                    </div>
-                  ))}
-                </div>
-              )}
             </div>
 
             {/* Book Details Dropdown */}
