@@ -61,10 +61,14 @@ export const ReadMore = () => {
           {/* Right Column - Book Content */}
           <div className="order-1 space-y-4 text-center md:text-left">
             {/* Title */}
-            <span className="w-full px-6 py-4 bg-gray-100 flex items-center justify-between text-left">Why SIP is one of the simplest and safest ways to build long term wealth, and how to choose the right funds to create a personalised plan that fits their life.</span>
-            <span className="w-full px-6 py-4 bg-gray-100 flex items-center justify-between text-left">Why habits, discipline and consistency matter more than trying to time the market, along with real stories of people who built wealth and those who lost out by quitting too early.</span>
-            <span className="w-full px-6 py-4 bg-gray-100 flex items-center justify-between text-left">How to build multi asset and multi generational wealth in an Indian context, including SIPs for children and women, along with equity, unlisted shares, real estate and crypto.</span>
-            <span className="w-full px-6 py-4 bg-gray-100 flex items-center justify-between text-left">How to shift from a survival mindset to a wealth creator mindset through a clear step by step execution system and a powerful 10 rule manifesto.</span>
+            <span className="hidden sm:flex w-full px-6 py-4 bg-gray-100 items-center justify-between text-left">Why SIP is one of the simplest and safest ways to build long term wealth, and how to choose the right funds to create a personalised plan that fits their life.</span>
+            <span className="sm:hidden w-full px-6 py-4 bg-gray-100 flex items-center justify-between text-left">Why SIP is one of the simplest and safest ways to build long term wealth.</span>
+            <span className="hidden sm:flex w-full px-6 py-4 bg-gray-100 items-center justify-between text-left">Why habits, discipline and consistency matter more than trying to time the market, along with real stories of people who built wealth and those who lost out by quitting too early.</span>
+            <span className="sm:hidden w-full px-6 py-4 bg-gray-100 flex items-center justify-between text-left">Why habits, discipline and consistency matter more than trying to time the market.</span>
+            <span className="hidden sm:flex w-full px-6 py-4 bg-gray-100 items-center justify-between text-left">How to build multi asset and multi generational wealth in an Indian context, including SIPs for children and women, along with equity, unlisted shares, real estate and crypto.</span>
+            <span className="sm:hidden w-full px-6 py-4 bg-gray-100 flex items-center justify-between text-left">How to build multi asset and multi generational wealth in an Indian context.</span>
+            <span className="hidden sm:flex w-full px-6 py-4 bg-gray-100 items-center justify-between text-left">How to shift from a survival mindset to a wealth creator mindset through a clear step by step execution system and a powerful 10 rule manifesto.</span>
+            <span className="sm:hidden w-full px-6 py-4 bg-gray-100 flex items-center justify-between text-left">How to shift from a survival mindset to a wealth creator mindset.</span>
           </div>
         </div>
       </div>

@@ -37,7 +37,7 @@ const testimonialsData = [
   },
   {
     id: 6,
-    title: "MCM Social Media Channel",
+    title: "MCM Social Media",
     icon: Share2,
     description: "A dedicated video hub offering regular updates, tutorials, and valuable financial education content. Stay informed about wealth management and financial growth opportunities through bite-sized learning modules and market analysis.",
   },
