@@ -15,7 +15,7 @@ export const Footer = () => {
           >
             Ashok Devanampriya
           </a>
-          <p className="text-gray-600 mt-2 text-sm">
+          <p className="text-gray-600 mt-2 text-sm font-poppins">
             Author of Middle Class Millionaire
           </p>
         </div>

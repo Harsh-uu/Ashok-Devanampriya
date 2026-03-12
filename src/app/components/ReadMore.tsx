@@ -39,7 +39,7 @@ export const ReadMore = () => {
         {/* Section Heading */}
         <div className="text-center mb-12">
           <h2 className="text-4xl md:text-5xl font-poppins font-semibold">
-            What Readers <span className="text-[#e9343b]">Learn</span>
+            What You Will <span className="text-[#e9343b]">Learn</span>
           </h2>
         </div>
 
@@ -59,7 +59,7 @@ export const ReadMore = () => {
           </div>
 
           {/* Right Column - Book Content */}
-          <div className="order-1 space-y-4 text-center md:text-left">
+          <div className="order-1 space-y-4 text-center md:text-left font-poppins">
             {/* Title */}
             <span className="hidden sm:flex w-full px-6 py-4 bg-gray-100 items-center justify-between text-left">Why SIP is one of the simplest and safest ways to build long term wealth, and how to choose the right funds to create a personalised plan that fits their life.</span>
             <span className="sm:hidden w-full px-6 py-4 bg-gray-100 flex items-center justify-between text-left">Why SIP is one of the simplest and safest ways to build long term wealth.</span>

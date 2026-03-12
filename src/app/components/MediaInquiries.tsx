@@ -18,8 +18,8 @@ export const MediaInquiries = () => {
         {/* Content */}
         <div className="space-y-8">
           {/* Description Text */}
-          <p className="text-lg md:text-xl text-gray-700 leading-relaxed max-w-3xl mx-auto">
-            For media inquiries, rights, or event requests, please contact Nu VoicePress, a publishing division of Hubhawks India.
+          <p className="text-lg md:text-xl text-gray-700 leading-relaxed max-w-3xl mx-auto font-poppins">
+            For media inquiries, rights, or event requests, please contact Nu Voice Press, a publishing division of Hubhawks India.
           </p>
 
           {/* Contact Information */}
@@ -31,7 +31,7 @@ export const MediaInquiries = () => {
                 href="https://nuvoicepress.com"
                 target="_blank"
                 rel="noopener noreferrer"
-                className="inline-flex items-center gap-3 bg-[#e9343b] text-white font-semibold py-3 px-6 hover:bg-red-700 transition-colors"
+                className="inline-flex items-center gap-3 bg-[#e9343b] text-white font-semibold py-3 px-6 hover:bg-red-700 transition-colors font-poppins"
               >
                 <span className="text-lg">Visit Publisher</span>
                 <ExternalLink className="w-4 h-4" />
@@ -41,10 +41,10 @@ export const MediaInquiries = () => {
 
           {/* Additional Info */}
           <div className="mt-12 p-6 bg-white shadow-sm border">
-            <h3 className="text-xl font-semibold text-gray-800 mb-3">
+            <h3 className="text-xl font-semibold text-gray-800 mb-3 font-poppins">
               Media Kit Available
             </h3>
-            <p className="text-gray-600">
+            <p className="text-gray-600 font-poppins">
               High-resolution images, author bio, and press materials available upon request.
             </p>
           </div>

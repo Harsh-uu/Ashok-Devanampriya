@@ -130,7 +130,7 @@ export const BookTrailer = () => {
           <h2 className="text-4xl md:text-5xl font-poppins font-semibold text-gray-900 mb-4">
             Wealth Expo <span className="text-[#e9343b]">2025</span>
           </h2>
-          <p className="text-lg text-gray-600">
+          <p className="text-lg text-gray-600 font-poppins">
             India's Largest Offline Summit & Expo 2025
           </p>
         </div>

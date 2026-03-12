@@ -15,7 +15,7 @@ const bookData = {
     "Real stories of people who won big (and those who lost by quitting early)",
   ],
   details: {
-    genre: "",
+    genre: "Finance",
     category: "Non-fiction",
     pageExtent: "",
     releaseType: "English",
@@ -23,7 +23,7 @@ const bookData = {
     binding: "Paperback",
     price: "",
     publicationDate: "",
-    publisher: "Nu VoicePress",
+    publisher: "Nu Voice Press",
     distributer: "Penguin Random House India",
   },
   buyLinks: [{ name: "Amazon", url: "", id: 0 }],
@@ -62,10 +62,24 @@ export const AboutTheBook = () => {
           <div className="order-2 lg:order-2 space-y-6 md:space-y-8 text-center md:text-left">
             {/* Title */}
             <div>
-              <div className="space-y-4 text-base lg:text-lg text-justify leading-relaxed">
+              <div className="space-y-4 text-base lg:text-lg font-poppins text-justify leading-relaxed">
                 <p className="text-gray-700">
-                  <span className="font-bold">The Middle Class Millionaire</span> is a practical, emotional, and transformational money guide for India’s middle class that explains why millions of hardworking Indians earn well yet remain trapped in EMIs, fear, and financial confusion. Told through relatable, story-driven chapters following Arjun, his family, and everyday Indians, the book takes readers from financial stress to clarity and control by exposing behavioural traps, money myths, and hidden leaks that silently drain wealth. Before diving into investments, it lays down the non-negotiable foundations—emergency funds, term and health insurance, and clear thinking around gold and fixed deposits—helping readers build a strong financial safety engine and make small, powerful shifts toward long-term wealth and independence.
-
+                  <span className="font-semibold">
+                    The Middle Class Millionaire
+                  </span>{" "}
+                  is a practical, emotional, and transformational money guide
+                  for India’s middle class that explains why millions of
+                  hardworking Indians earn well yet remain trapped in EMIs,
+                  fear, and financial confusion. Told through relatable,
+                  story-driven chapters following Arjun, his family, and
+                  everyday Indians, the book takes readers from financial stress
+                  to clarity and control by exposing behavioural traps, money
+                  myths, and hidden leaks that silently drain wealth. Before
+                  diving into investments, it lays down the non-negotiable
+                  foundations—emergency funds, term and health insurance, and
+                  clear thinking around gold and fixed deposits—helping readers
+                  build a strong financial safety engine and make small,
+                  powerful shifts toward long-term wealth and independence.
                 </p>
               </div>
             </div>
@@ -86,7 +100,7 @@ export const AboutTheBook = () => {
                 )}
               </button>
               {bookDetailsOpen && (
-                <div className="px-6 py-4 bg-white">
+                <div className="px-6 py-4 bg-white font-poppins">
                   <div className="grid grid-cols-1 gap-3 text-sm">
                     <div className="flex justify-between">
                       <span className="font-medium text-gray-600">Genre:</span>
@@ -156,7 +170,7 @@ export const AboutTheBook = () => {
                     </div>
                     <div className="flex justify-between">
                       <span className="font-medium text-gray-600">
-                        Distributer:
+                        Distributor:
                       </span>
                       <span className="text-gray-800">
                         {bookData.details.distributer}

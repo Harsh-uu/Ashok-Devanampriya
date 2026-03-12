@@ -41,7 +41,7 @@ export const Company = () => {
           </div>
 
           {/* Bio Text (Centered) */}
-          <div className="max-w-3xl text-center space-y-4">
+          <div className="max-w-3xl text-center space-y-4 font-poppins">
             <p className="text-gray-700 text-base md:text-lg lg:text-lg">
               <span className="font-semibold">Cautilya Capital</span> is a strategic capital and advisory firm built on the principles of disciplined investing, long-term value creation, and ethical decision-making.
             </p>

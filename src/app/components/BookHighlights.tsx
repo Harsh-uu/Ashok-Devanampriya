@@ -94,10 +94,10 @@ export const BookHighlights = () => {
 
                     {/* Chapter badge & title */}
                     <div className="relative z-10 mb-8">
-                      <span className="inline-block bg-rose-100 text-[#e9343b] text-xs font-semibold tracking-wider uppercase px-4 py-1.5 rounded-full mb-3">
+                      <span className="inline-block bg-rose-100 text-[#e9343b] text-xs font-semibold tracking-wider font-poppins uppercase px-4 py-1.5 rounded-full mb-3">
                         Chapter {ch.chapter}
                       </span>
-                      <h3 className="text-base md:text-lg font-medium text-gray-500 leading-snug max-w-xl mx-auto">
+                      <h3 className="text-base md:text-lg font-medium text-gray-500 leading-snug max-w-xl mx-auto font-poppins">
                         {ch.title}
                       </h3>
                     </div>

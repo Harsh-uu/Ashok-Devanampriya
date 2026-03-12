@@ -57,9 +57,9 @@ export const Testimonials = () => {
         <div className="grid grid-cols-1 md:grid-cols-2 lg:grid-cols-3 gap-8 max-w-6xl mx-auto">
           {testimonialsData.map((testimonial) => (
             <div key={testimonial.id} className="h-[280px]">
-              <div className="bg-white shadow-lg transition-all duration-300 hover:shadow-xl border border-gray-200 h-full flex flex-col">
+              <div className="bg-white shadow-lg transition-all duration-300 hover:shadow-xl border border-gray-200 h-full flex flex-col font-poppins">
                 {/* Header with Icon and Title */}
-                <div className="text-center pb-6 border-b-2 border-gray-200 flex items-center justify-center gap-4 px-6 pt-6">
+                <div className="text-center py-4 border-b-2 border-gray-200 flex items-center justify-center gap-4 px-6">
                   <div className="rounded-full border-rose-500 bg-rose-100 border p-2 flex-shrink-0">
                     {React.createElement(testimonial.icon, {
                       className: "w-5 h-5 text-red-500",
