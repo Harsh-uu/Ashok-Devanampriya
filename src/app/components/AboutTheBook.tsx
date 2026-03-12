@@ -62,7 +62,7 @@ export const AboutTheBook = () => {
           <div className="order-2 lg:order-2 space-y-6 md:space-y-8 text-center md:text-left">
             {/* Title */}
             <div>
-              <div className="space-y-4 text-base lg:text-lg font-poppins text-justify leading-relaxed">
+              <div className="space-y-4 text-base lg:text-md font-poppins text-justify leading-relaxed">
                 <p className="text-gray-700">
                   <span className="font-semibold">
                     The Middle Class Millionaire
