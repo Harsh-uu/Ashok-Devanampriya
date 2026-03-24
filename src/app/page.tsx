@@ -18,11 +18,17 @@ export default function Home() {
     <div className="relative text-gray-800 font-sans">
       {/* Background container with herobg.jpg */}
       <div
-        className="relative bg-cover bg-center bg-no-repeat"
-        style={{ backgroundImage: "url('/image.png')" }}
+        className="relative overflow-hidden"
+        style={{
+          background:
+            "linear-gradient(90deg, #6c1714, #c92929, #6c1714)",
+        }}
       >
+        <div
+          className="absolute inset-0 opacity-60 [background-size:56px_56px] [background-image:linear-gradient(to_right,rgba(243,244,246,0.18)_1px,transparent_1px),linear-gradient(to_bottom,rgba(243,244,246,0.18)_1px,transparent_1px)]"
+        />
         {/* Background overlay for better content readability */}
-        <div className="absolute inset-0 bg-black/40" />
+        <div className="absolute inset-0 bg-black/25" />
 
         {/* Header and Hero content positioned above background */}
         <div className="relative z-10 h-full flex flex-col overflow-hidden">

@@ -40,7 +40,7 @@ export const Hero = () => {
         <div className="relative z-10 flex-shrink-0">
           {/* Red blob glow background */}
           <div className="absolute inset-0 -m-8 z-0">
-            <div className="w-full h-full bg-gradient-radial from-red-300/80 via-red-400/80 to-transparent blur-3xl"></div>
+            <div className="w-full h-full bg-gradient-radial from-red-200/80 via-red-400/80 to-transparent blur-3xl"></div>
           </div>
           {/* Additional glow layers for enhanced effect */}
           <div className="absolute inset-0 -m-12 z-0">
@@ -52,7 +52,7 @@ export const Hero = () => {
           
           <div className="relative z-10 p-3">
             <Image
-              src="/mcm_cover.jpg"
+              src="/mcm_updated.jpeg"
               alt="Middle Class Millionaire Book"
               width={350}
               height={350}

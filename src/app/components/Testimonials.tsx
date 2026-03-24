@@ -54,28 +54,26 @@ export const Testimonials = () => {
         </div>
 
         {/* Grid Layout */}
-        <div className="grid grid-cols-1 md:grid-cols-2 lg:grid-cols-3 gap-8 max-w-6xl mx-auto">
+        <div className="grid grid-cols-1 md:grid-cols-2 lg:grid-cols-3 gap-6 max-w-6xl mx-auto">
           {testimonialsData.map((testimonial) => (
-            <div key={testimonial.id} className="h-[280px]">
-              <div className="bg-white shadow-lg transition-all duration-300 hover:shadow-xl border border-gray-200 h-full flex flex-col font-poppins">
-                {/* Header with Icon and Title */}
-                <div className="text-center py-4 border-b-2 border-gray-200 flex items-center justify-center gap-4 px-6">
-                  <div className="rounded-full border-rose-500 bg-rose-100 border p-2 flex-shrink-0">
+            <div key={testimonial.id} className="h-full">
+              <div className="bg-white rounded-lg border border-gray-200 shadow-sm hover:shadow-lg transition-shadow duration-300 h-full flex flex-col font-poppins p-6">
+                {/* Icon and Title */}
+                <div className="flex items-center gap-3 mb-4">
+                  <div className="bg-rose-100 rounded p-2">
                     {React.createElement(testimonial.icon, {
-                      className: "w-5 h-5 text-red-500",
+                      className: "w-5 h-5 text-[#e9343b]",
                     })}
                   </div>
-                  <h3 className="text-lg font-semibold text-gray-900">
+                  <h3 className="text-base font-semibold text-gray-900">
                     {testimonial.title}
                   </h3>
                 </div>
 
                 {/* Description */}
-                <div className="flex-1 flex items-center justify-center px-6">
-                  <p className="text-gray-700 text-sm leading-relaxed text-center">
-                    {testimonial.description}
-                  </p>
-                </div>
+                <p className="text-gray-600 text-sm leading-relaxed flex-1">
+                  {testimonial.description}
+                </p>
               </div>
             </div>
           ))}
