@@ -49,7 +49,7 @@ export const AboutTheBook = () => {
           <div className="order-1 lg:order-1">
             <div className="relative aspect-[3/4] max-w-md mx-auto lg:max-w-full">
               <Image
-                src="/mcm_atb.png"
+                src="/mcm_book.jpeg"
                 alt={bookData.title}
                 fill
                 className="object-cover"

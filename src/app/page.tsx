@@ -21,14 +21,13 @@ export default function Home() {
         className="relative overflow-hidden"
         style={{
           background:
-            "linear-gradient(90deg, #6c1714, #c92929, #6c1714)",
+            "linear-gradient(135deg, #6c170f, #d52b27 48%, #d52b27 52%, #6c170f)",
         }}
       >
         <div
           className="absolute inset-0 opacity-60 [background-size:56px_56px] [background-image:linear-gradient(to_right,rgba(243,244,246,0.18)_1px,transparent_1px),linear-gradient(to_bottom,rgba(243,244,246,0.18)_1px,transparent_1px)]"
         />
         {/* Background overlay for better content readability */}
-        <div className="absolute inset-0 bg-black/25" />
 
         {/* Header and Hero content positioned above background */}
         <div className="relative z-10 h-full flex flex-col overflow-hidden">

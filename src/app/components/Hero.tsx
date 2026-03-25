@@ -12,9 +12,7 @@ export const Hero = () => {
   };
 
   return (
-    <section className="relative max-w-7xl p-4 mx-auto overflow-hidden md:overflow-visible">
-      {/* Background overlay */}
-      
+    <section className="relative max-w-7xl p-4 mx-auto overflow-hidden md:overflow-visible">      
       <div className="relative z-10 max-w-7xl text-white flex flex-col xl:flex-row md:gap-8 items-center xl:items-start">
         <div className="w-fit z-20 text-center xl:text-center my-auto max-w-2xl">
           <h1 className="text-3xl uppercase md:text-6xl xl:text-7xl font-semibold leading-tight font-poppins">
@@ -30,33 +28,21 @@ export const Hero = () => {
           <div className="mt-6 sm:mt-8 xl:mt-10 flex flex-col sm:flex-row gap-4 justify-center">
             <button 
               onClick={handleDiscoverClick}
-              className="hidden sm:block px-4 py-2 bg-[#e9343b] text-white font-medium uppercase hover:bg-red-600 transition-all duration-300 cursor-pointer"
+              className="hidden sm:block px-4 py-2 bg-white text-black font-semibold uppercase hover:text-red-600 transition-all duration-300 cursor-pointer"
             >
               Discover The Story
             </button>
           </div>
         </div>
         
-        <div className="relative z-10 flex-shrink-0">
-          {/* Red blob glow background */}
-          <div className="absolute inset-0 -m-8 z-0">
-            <div className="w-full h-full bg-gradient-radial from-red-200/80 via-red-400/80 to-transparent blur-3xl"></div>
-          </div>
-          {/* Additional glow layers for enhanced effect */}
-          <div className="absolute inset-0 -m-12 z-0">
-            <div className="w-full h-full bg-red-500/20 rounded-full blur-2xl"></div>
-          </div>
-          <div className="absolute inset-0 -m-16 z-0">
-            <div className="w-full h-full bg-red-400/10 rounded-full blur-3xl"></div>
-          </div>
-          
+        <div className="relative z-10 flex-shrink-0">          
           <div className="relative z-10 p-3">
             <Image
               src="/mcm_updated.jpeg"
               alt="Middle Class Millionaire Book"
               width={350}
               height={350}
-              className=" w-[80%] mx-auto md:w-full h-full object-cover drop-shadow-2xl"
+              className=" w-[80%] mx-auto md:w-full h-full object-cover border border-white/20 shadow-[0_0_20px_rgba(0,0,0,0.69)]"
               priority
             />
           </div>
