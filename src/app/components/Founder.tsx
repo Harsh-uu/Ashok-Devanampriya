@@ -32,10 +32,14 @@ export const Founder = () => {
           </div>
 
           {/* --- Text Content Column (Second) --- */}
-          <div className="lg:w-1/2 md:w-[60%] w-full flex flex-col justify-center p-4 md:p-12 lg:p-16 text-center lg:text-left">
+          <div className="lg:w-1/2 md:w-[60%] w-full flex flex-col justify-center py-6 px-4 md:p-12 lg:p-16 text-center lg:text-left">
             <h1 className="text-3xl font-semibold">Ashok Devanampriya</h1>
            
-            <p className="text-gray-600 lg:text-lg leading-relaxed mt-4 font-poppins">
+            <p className="text-gray-600 lg:text-lg leading-relaxed mt-4 font-poppins block lg:hidden">
+              Ashok is a fintech entrepreneur and the founder of Cautilya Capital, helping Indian HNIs and global NRIs invest responsibly through AI-driven research and risk-adjusted strategies. With over a decade of market experience, he combines quantitative models, investing psychology, and disciplined risk management to guide long-term wealth creation.
+            </p>
+
+            <p className="text-gray-600 lg:text-lg leading-relaxed mt-4 font-poppins hidden lg:block">
               Ashok is a fintech entrepreneur helping Indian HNIs and global NRIs invest responsibly through AI-driven research and risk-adjusted strategies. He is the founder and CEO of Cautilya Capital, a Bengaluru-based quant wealth management firm. With over a decade of market experience, he combines quantitative models, investing psychology, and risk management to guide long-term wealth creation. A mechanical engineer, MBA, and IIM Bangalore alumnus, Ashok is also a TEDx speaker, mentor, and visiting professor at leading business schools across India.
             </p>
           </div>
